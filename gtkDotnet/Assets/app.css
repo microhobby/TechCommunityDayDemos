@@ -1,0 +1,56 @@
+
+.nav-bar {
+    background-color: rgb(66, 135, 245);
+}
+
+.nav-bar-red {
+    background-color: rgb(245, 66, 66);
+}
+
+.opacity_trans {
+	transition: opacity 500ms ease-in-out;
+}
+
+.percent100 {
+    opacity: 1;
+}
+
+.percent90 {
+    opacity: 0.9;
+}
+
+.percent80 {
+    opacity: 0.8;
+}
+
+.percent70 {
+    opacity: 0.7;
+}
+
+.percent60 {
+    opacity: 0.6;
+}
+
+.percent50 {
+    opacity: 0.5;
+}
+
+.percent40 {
+    opacity: 0.4;
+}
+
+.percent30 {
+    opacity: 0.3;
+}
+
+.percent20 {
+    opacity: 0.2;
+}
+
+.percent10 {
+    opacity: 0.1;
+}
+
+.percent0 {
+    opacity: 0;
+}

@@ -1,0 +1,147 @@
+devices:
+    common:
+    - /dev/gpiochip1
+    debug: []
+    release: []
+dockercomposefile:
+    common: docker-compose.yml
+    debug: ''
+    release: ''
+extraparms:
+    common:
+        device_cgroup_rules: '["c 226:* rmw"]'
+    debug: {}
+    release: {}
+id: 0034b27f-4fee-4df0-a51f-7f06f282b395
+images:
+    debug: sha256:0389cad4f228874d3723e4939a37c76a56ce5e5a93d4aaf67e1172fe495d2838
+    release: ''
+modificationdate: '2020-06-12T07:25:58.609904'
+networks:
+    common: []
+    debug: []
+    release: []
+platformid: arm32v7-debian-dotnet_buster
+ports:
+    common: {}
+    debug: {}
+    release: {}
+privatekey: '-----BEGIN RSA PRIVATE KEY-----
+
+    MIIEogIBAAKCAQEA1XzyhgEQMwTsJVOqwCvWJtagLP+sBIGfW0azGuI89iJ6yg/4
+
+    QHhmzb7qLv/D8Bu8dJlXanIvRK36TONHl5xMnEEhCrDClsZMx0JFt9Am07AI49nu
+
+    y54eUpfX6a7FYdoU6txDK2mDhDIhhaHrJwGJ/sMCadX2Q1MvkKwnrqZAd2kBaR4F
+
+    JPwC0F8MksCzKm7P74GDFTc04mMEdDSeSEMcxI357SGQgM2/KlyXkJpssfT/oqwy
+
+    sr2kpNtRjNoS7sZAM8CRLLrWyc2rOsZp1jlELHHlN+5/+R73ZUyys4c5tlHHm2tT
+
+    9+mIazfpJDSprGFgT1c41RcZ9kHoTnTh7mq9HwIDAQABAoIBABS6Q+XE1qjNcowR
+
+    OoPb/bfZoMWdsTrixvEaxSr4CkkvgdJ6iHTh+8FAJwaXKJP4bWy4sqcQHQzDA4lR
+
+    i9LphvqozCd4j/wJlszF33UATbTB46sTrr6wRGtqeLkkkd91SBChgBgH74/3Og/6
+
+    b5Vi7d4BWwuhjX5t5jFataOcWqf9KZLSKCRc7XlxK//ax6+OQQWEiUjJfUDMGMTD
+
+    mXI/c/tI/UZPslmJ4s6GSlLLsACySt9MTRrt2gEK/q8e8y+6yg6RNXz/Az/FDIoV
+
+    s7dKWhGD4svrVN2Q/6QCV/F8q8UFflVCy2R+5jv/ojFCSx47JSl5LqlVoras51EG
+
+    Aw3R3/kCgYEA7E3LmOpTLjikRhcrDRbqs4EWCuPVLhNNupNwidkihmGs8Y+oQdd6
+
+    +oZ0ctH+NVur1gEl+pETMQwqL2zsi4BFq9dl74ZBLcnn9UwUx0qRSwRiRf12GtKe
+
+    9QXc3T6VAZDnQjh7/DF9PmkST7lI2UxikK+H0/Mk8ILjJ8pMkwU6tLUCgYEA50hQ
+
+    FzyrFwrE0NJLcCarUIquTcZVRXCFwZNX92Rt8gvwBFRsNIAyNMCCHqp+VNoyU+6Q
+
+    D13bA9Wk9Cyn9FqrJ3odjl7hnH765pvDybEwv+kt55MOrCo/REYCr0hsmLd9dNIN
+
+    Xs3asrzpcaHHY2dtg+v/L1o6vVVKotPYUp56gwMCgYBlYkNWCkNB839Xqx0Hcquj
+
+    9GBWr8WJDTMuN4/zNLwBV+rxgSc5iI/06LcRhFNC5V/mY3u983x+cK+wxVT/zTsX
+
+    LUVI7RsN4DCrJ8dKcg3AV9MqIEMJ4w/cJHXMXstjbp4p5T4cx8bqff4jQmWlBYbM
+
+    eOMX5pwUrLN1IPCVq4qyeQKBgCLEoCWeHSotmEC8HFMTvRUyg9l1Q0RZEgJzn/m0
+
+    w0JrwP0lo86Qpvt/JRBvGOawlng/mLB2r4H4EAAU5nq5VplsphzM7qWUASvBpsEf
+
+    PfDboOb7GG2RPEmLLMQk4w5iJx30pcXmtEXCWGWYqFytI619QLNhoQrtU3b+2box
+
+    0MD5AoGAM0Dyx+hTPSy4zGQDFYhAFoxzJQTwuGqQ/CwJEtP/xc+2TStqaQCOKicV
+
+    UFTkqKROREh8c5+YcvUVym4jYdnvmJ9/511dbZZP6JvCjQcZ2Z6xKsFuhfPPWo+S
+
+    9p63dpeicNl6j40qYF80dVnUG1AFZ76tB0pgsWt41a7BQGFLntQ=
+
+    -----END RSA PRIVATE KEY-----
+
+    '
+props:
+    common:
+        appargs: ''
+        appname: gtkDotnet
+        arg: ''
+        buildcommands: 'RUN apt-get -y update && apt-get install -y --no-install-recommends
+            libicu63 curl gettext apt-transport-https libx11-6 libunwind8 icu-devtools
+            libfontconfig1 libgtk-3-0 libgtk-3-bin libgtk-3-common libdrm2 libgbm1
+            libinput10 libgpiod-dev && apt-get clean && apt-get autoremove && rm -rf
+            /var/lib/apt/lists/*
+
+            RUN apt-get -y update && apt-get --reinstall install shared-mime-info
+            && apt-get clean && apt-get autoremove && rm -rf /var/lib/apt/lists/*
+
+            RUN echo "DISPLAY=:0" > /home/torizon/.ssh/environment && echo "WAYLAND_DISPLAY=wayland-0"
+            >> /home/torizon/.ssh/environment && echo "WAYLAND_USER=torizon" >> /home/torizon/.ssh/environment
+            && echo "XDG_RUNTIME_DIR=/tmp/1000-runtime-dir" >> /home/torizon/.ssh/environment
+            && echo "GDK_BACKEND=wayland" >> /home/torizon/.ssh/environment && echo
+            "GTK_THEME=Windows-10-Dark" >> /home/torizon/.ssh/environment && echo
+            "PermitUserEnvironment yes" >> /etc/ssh/sshd_config
+
+            RUN usermod -a -G gpio torizon '
+        buildfiles: ''
+        devpackages: ''
+        env: ''
+        expose: ''
+        extrapackages: libgpiod2 libgpiod-dev
+        language: dotnet
+        preinstallcommands: ''
+        runtime: dotnet
+        sdkpostinstallcommands: ''
+        sdkpreinstallcommands: ''
+        targetfiles: 'COPY themes /usr/share/themes
+
+            COPY settings.ini /etc/gtk-3.0'
+    debug:
+        arg: 'ARG SSHUSERNAME=#%application.username%#
+
+            '
+    release: {}
+publickey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVfPKGARAzBOwlU6rAK9Ym1qAs/6wEgZ9bRrMa4jz2InrKD/hAeGbNvuou/8PwG7x0mVdqci9ErfpM40eXnEycQSEKsMKWxkzHQkW30CbTsAjj2e7Lnh5Sl9fprsVh2hTq3EMraYOEMiGFoesnAYn+wwJp1fZDUy+QrCeupkB3aQFpHgUk/ALQXwySwLMqbs/vgYMVNzTiYwR0NJ5IQxzEjfntIZCAzb8qXJeQmmyx9P+irDKyvaSk21GM2hLuxkAzwJEsutbJzas6xmnWOUQsceU37n/5HvdlTLKzhzm2Uceba1P36YhrN+kkNKmsYWBPVzjVFxn2QehOdOHuar0f
+sdkimages:
+    debug: matheuscastello/arm32v7-dotnet-debug-debian-wayland-base
+    release: matheuscastello/arm32v7-dotnet-debian-wayland-base
+sdksshaddress: null
+shutdownscript:
+    common: ''
+    debug: ''
+    release: ''
+startupscript:
+    common: ''
+    debug: ''
+    release: ''
+username: torizon
+volumes:
+    common:
+        /dev/dri: /dev/dri
+        /sys: /sys
+        /tmp: /tmp
+        /var/run/dbus: /var/run/dbus
+    debug:
+        /home/torizon/GTKSharp: /GTKSharp,rw
+        /home/torizon/gtkDotnet: /gtkDotnet,rw
+    release: {}

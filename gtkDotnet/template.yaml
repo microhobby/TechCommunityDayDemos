@@ -1,0 +1,5 @@
+label: .NET Console Application
+detail: $(terminal) Creates a minimal console application sample, based on a debian container and .NET Core 3.1
+platforms:
+  - arm32v7-debian-dotnet_buster
+  - arm64v8-debian-dotnet_buster

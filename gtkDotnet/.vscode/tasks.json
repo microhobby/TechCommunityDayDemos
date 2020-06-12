@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/gtkDotnet.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "-r",
+                "${command:torizon.net.getDotNetRuntimeId}",
+                "-o",
+                "${workspaceFolder}/${config:torizon.appfolder}/work/gtkDotnet",
+                "${workspaceFolder}/gtkDotnet.csproj"
+            ],
+            "problemMatcher": "$msCompile",
+            "dependsOn": [
+                "build"
+            ]
+        }
+    ]
+}
